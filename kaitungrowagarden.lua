@@ -1,4 +1,7 @@
-getgenv().Config = { 
+getgenv().Config = {
+    ["Enable Screen Black"] = true,
+    ["Screen Black FPS Cap"] = 30,
+
     ["Buy Seeds"] = {
         ["Enabled"] = true,
         ["Threshold"] = 10,
@@ -22,7 +25,9 @@ getgenv().Config = {
             ["Mushroom"] = true,
             ["Pepper"] = true,
             ["Cacao"] = true,
-            ["Beanstalk"] = true
+            ["Beanstalk"] = true,
+            ["Ember Lily"] = true,
+            ["Sugar Apple"] = true
         }
     },
 
@@ -32,13 +37,16 @@ getgenv().Config = {
         ["Item"] = {
             ["Watering Can"] = true,
             ["Trowel"] = true,
-            ["Recall Wrench"] = true,
-            ["Basic Sprinkler"] = true,
-            ["Advanced Sprinkler"] = true,
+            ["Recall Wrench"] = false,
+            ["Basic Sprinkler"] = false,
+            ["Advanced Sprinkler"] = false,
             ["Godly Sprinkler"] = true,
             ["Lightning Rod"] = true,
-            ["Master Sprinkler"] = true,
-            ["Favorite Tool"] = false
+            ["Master Sprinkler"] = false,
+            ["Favorite Tool"] = false,
+            ["Haverst Tool"] = false,
+            ["Friendship Pot"] = true,
+            ["Cleaning Spray"] = true
         }
     },
 
@@ -54,27 +62,6 @@ getgenv().Config = {
             ["Bug Egg"] = true
         }
     },
-
-    ["Buy Events"] = {
-        ["Enabled"] = true,
-        ["Item"] = {
-            ["Flower Seed Pack"] = true,
-            ["Nectarine"] = true,
-            ["Hive Fruit"] = true,
-            ["Honey Sprinkler"] = true,
-            ["Bee Egg"] = true,
-            ["Bee Crate"] = false,
-            ["Honey Comb"] = false,
-            ["Bee Chair"] = false,
-            ["Honey Torch"] = false,
-            ["Honey Walkway"] = false,
-            ["Pollen Radar"] = false,
-            ["Nectarshade Seed"] = false,
-            ["Lavender Seed"] = false,
-            ["Nectar Staff"] = false
-        }
-    },
-
     ["Use Sprinklers"] = {
         ["Enabled"] = true,
         ["Sprinkler"] = {
@@ -97,12 +84,12 @@ getgenv().Config = {
             "Golden Lab"
         },
         ["Pet Rarity"] = {
-            {["Common"] = true},
-            {["Uncommon"] = true},
-            {["Rare"] = true},
-            {["Legendary"] = true},
-            {["Mythical"] = true},
-            {["Divine"] = true}
+            { ["Common"] = true },
+            { ["Uncommon"] = true },
+            { ["Rare"] = true },
+            { ["Legendary"] = true },
+            { ["Mythical"] = true },
+            { ["Divine"] = true }
         }
     },
 
@@ -144,11 +131,11 @@ getgenv().Config = {
     ["Delete Planted Seed"] = {
         ["Enabled"] = true,
         ["Slot"] = {
-            {slot = 300, min = 0},
-            {slot = 200, min = 1000000},
-            {slot = 150, min = 10000000},
-            {slot = 100, min = 20000000},
-            {slot = 50, min = 100000000}
+            { slot = 300, min = 0 },
+            { slot = 200, min = 1000000 },
+            { slot = 150, min = 10000000 },
+            { slot = 100, min = 20000000 },
+            { slot = 50, min = 100000000 }
         },
         ["Name Seed Delete"] = {
             "Strawberry",
@@ -164,6 +151,27 @@ getgenv().Config = {
             ["Enabled"] = true,
             ["Delay"] = 5
         }
+    },
+
+    ["ESP"] = {
+        ["Egg"] = true,
+        ["Player"] = true,
+        ["Pollinated"] = true
+    },
+
+    ["Dino Event"] = {
+        ["Trade Egg"] = true,
+        ["Pet Trade"] = {
+            "Cow", "Silver Monkey", "Sea Otter", "Turtle", "Grey Mouse", "Brown Mouse",
+            "Red Giant Ant", "Caterpillar", "Snail", "Giant Ant", "Praying Mantis",
+            "Bee", "Honey Bee", "Petal Bee", "Ostrich", "Peacock", "Capybara"
+        },
+        ["Pet Dont Trade"] = {
+            ""
+        },
+        ["Trade All Pet"] = false,
+        ["Claim Reward"] = true,
+        ["Delay"] = 10
     }
 }
 loadstring(game:HttpGet("https://raw.githubusercontent.com/shinichi-dz/phucshinsayhi/refs/heads/main/KaitunGrowAGarden.lua"))()
